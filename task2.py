@@ -17,7 +17,6 @@ import pandas as pd
 iris = load_iris()
 x = iris.data
 y = iris.target
-iris = load_iris()
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=42)
 knn = KNeighborsClassifier(n_neighbors=3)
 knn.fit(x_train, y_train)
