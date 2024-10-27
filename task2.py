@@ -43,7 +43,7 @@ plt.ylabel('True Label')
 plt.xlabel('Predicted Label')
 plt.show()
 iris_df = pd.DataFrame(x, columns=iris.feature_names)
-iris_df['species'] = iris.target
+iris_df['species'] = pd.Categorical.from_codes(y, iris.target_names)
 
 sns.pairplot(iris_df, hue='species', markers=["o", "s", "D"])
 plt.show()
